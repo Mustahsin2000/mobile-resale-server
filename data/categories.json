@@ -1,0 +1,101 @@
+[
+    
+        {
+          
+          "name": "Samsung Galaxy S20",
+          "img": "http://placehold.it/32x32",
+          "Location": "613 Maujer Street, Bowmansville, Kentucky, 6327",
+          "Actual_price": 20000,
+          "Resale_Price": 15000,
+          "Years-of-use": "2y",
+          "time-of-the-product-post": "4/5/20200",
+          "sellers-name":"Mustahsin"
+        },
+        {
+          
+          "name": "Samsung Galaxy M33",
+          "img": "http://placehold.it/32x32",
+          "Location": "613 Maujer Street, Bowmansville, Kentucky, 6327",
+          "Actual_price": 20000,
+          "Resale_Price": 15000,
+          "Years-of-use": "2y",
+          "time-of-the-product-post": "4/5/20200",
+          "sellers-name":"Rafi"
+        },
+        {
+          
+          "name": "Samsung Galaxy F23 ",
+          "img": "http://placehold.it/32x32",
+          "Location": "613 Maujer Street, Bowmansville, Kentucky, 6327",
+          "Actual_price": 20000,
+          "Resale_Price": 15000,
+          "Years-of-use": "2y",
+          "time-of-the-product-post": "4/5/20200",
+          "sellers-name":"Mafi"
+        },
+
+    
+        {
+         
+          "name": "iPhone 12",
+          "Location": "613 Maujer Street, Bowmansville, Kentucky, 6327",
+          "Actual_price": 20000,
+          "Resale_Price": 15000,
+          "Years-of-use": "2y",
+          "time-of-the-product-post": "4/5/2021",
+          "sellers-name":"Tofi"
+        },
+        {
+        
+          "name": "iPhone 14pro max",
+          "Location": "613 Maujer Street, Bowmansville, Kentucky, 6327",
+          "Actual_price": 20000,
+          "Resale_Price": 15000,
+          "Years-of-use": "2y",
+          "time-of-the-product-post": "4/5/2022",
+          "sellers-name":"shafi"
+        },
+        {
+        
+          "name": "iPhone 11",
+          "Location": "613 Maujer Street, Bowmansville, Kentucky, 6327",
+          "Actual_price": 20000,
+          "Resale_Price": 15000,
+          "Years-of-use": "2y",
+          "time-of-the-product-post": "4/5/2022",
+          "sellers-name":"Kofi"
+        },
+    
+    
+      
+        {
+          
+          "name": "onePlus 10T",
+          "Location": "613 Maujer Street, Bowmansville, Kentucky, 6327",
+          "Actual_price": 20000,
+          "Resale_Price": 15000,
+          "Years-of-use": "2y",
+          "time-of-the-product-post": "4/5/2018",
+          "sellers-name":"mus"
+        },
+        {
+          "name": "onePlus 9",
+          "Location": "613 Maujer Street, Bowmansville, Kentucky, 6327",
+          "Actual_price": 20000,
+          "Resale_Price": 15000,
+          "Years-of-use": "2y",
+          "time-of-the-product-post": "4/5/2016",
+          "sellers-name":"tah"
+        },
+        {
+          "name": "onePlus 9R",
+          "Location": "613 Maujer Street, Bowmansville, Kentucky, 6327",
+          "Actual_price": 20000,
+          "Resale_Price": 15000,
+          "Years-of-use": "2y",
+          "time-of-the-product-post": "4/5/2028",
+          "sellers-name":"sin"
+        }
+    
+  ]
+

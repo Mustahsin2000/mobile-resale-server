@@ -1,0 +1,199 @@
+[
+    {
+        "_id": "7c4dfea0fafddc813673282a428429b7",
+        "others_info": {
+          "is_todays_pick": false,
+          "is_trending": true
+        },
+        "category_id": "01",
+        "rating": { "number": 4.5, "badge": "Excellent" },
+        "total_view": 0,
+        "title": "InDesign",
+        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "image_url": "https://www.nicepng.com/png/detail/247-2474903_graphic-designing-vector-graphics.png",
+        "details": "Graphic Designing Softwares & Tools"
+      },
+
+    {
+      "_id": "11468ed61aee84de492a8b04158a22f0",
+      "others_info": {
+        "is_todays_pick": false,
+        "is_trending": false
+      },
+      "category_id": "01",
+      "rating": { "number": 4.5, "badge": "Excellent" },
+      "total_view": 980,
+      "title": "Image Layout & Effects",
+      "thumbnail_url": "https://i.ibb.co/HXC719r/unsplash-Eh-Tc-C9s-YXsw-19.png",
+      "image_url": "https://cdn3.vectorstock.com/i/1000x1000/64/22/to-do-list-smartphone-interface-template-vector-29126422.jpg",
+      "details": "Typography"
+    },
+
+       
+    {
+        "_id": "30af81e91ab3eafc0bcae0de62f55d5c",
+        "others_info": {
+          "is_todays_pick": false,
+          "is_trending": true
+        },
+        "category_id": "01",
+        "rating": { "number": 4.5, "badge": "Excellent" },
+        "total_view": 320,
+        "title": "Adobe Flash",
+        "thumbnail_url": "https://i.ibb.co/1vcgPzg/unsplash-Eh-Tc-C9s-YXsw-12.png",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/893/893321.png?w=360",
+        "details": "Photoshop"
+      },
+
+    {
+      "_id": "2e78e5e0310c2e9adbb6efb1a263e745",
+      "others_info": {
+        "is_todays_pick": false,
+        "is_trending": true
+      },
+      "category_id": "02",
+      "rating": { "number": 4.5, "badge": "Excellent" },
+      "total_view": null,
+      "title": "HTML",
+      "thumbnail_url": "https://i.ibb.co/k8XBcMX/unsplash-Eh-Tc-C9s-YXsw-15.png",
+      "image_url": "https://www.computerhope.com/issues/pictures/html-new-window.jpg",
+      "details": "HTML (HyperText Markup Language) is the code that is used to structure a web page and its content."
+    },
+    {
+        "_id": "f69a695f037cd9484cecaea37ca71012",
+        "others_info": {
+          "is_todays_pick": false,
+          "is_trending": true
+        },
+        "category_id": "02",
+        "rating": { "number": 4.3, "badge": "Excellent" },
+        "total_view": 400,
+        "title": "React",
+        "thumbnail_url": "https://i.ibb.co/k8XBcMX/unsplash-Eh-Tc-C9s-YXsw-15.png",
+        "image_url": "https://blog.logrocket.com/wp-content/uploads/2020/02/reactnativesinglethread.png",
+        "details": "React makes it painless to create interactive UIs."
+      },
+      {
+        "_id": "df11ff9feefc37613cc3a4486ce02151",
+        "others_info": {
+          "is_todays_pick": false,
+          "is_trending": false
+        },
+        "category_id": "02",
+        "rating": { "number": 4.5, "badge": "Excellent" },
+        "total_view": 552,
+        "title": "javascript",
+        "thumbnail_url": "https://i.ibb.co/dr4TRY4/unsplash-Eh-Tc-C9s-YXsw-21.png",
+        "image_url": "https://www.freepnglogos.com/uploads/javascript-png/javascript-nodejs-logo-27.png",
+        "details": "avaScript (often shortened to JS) is a lightweight, interpreted, object-oriented language with first-class functions,"
+      },
+
+      {
+        "_id": "cd2b53655737cc4077542baea9f8f75d",
+        "others_info": {
+          "is_todays_pick": false,
+          "is_trending": true
+        },
+        "category_id": "02",
+        "rating": { "number": 4.5, "badge": "Excellent" },
+        "total_view": 700,
+        "title": "Firebase",
+        "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
+        "image_url": "https://www.nicepng.com/png/detail/380-3804499_firebase-logo-google-logo-firebase-firebase-png.png",
+        "details": "Firebase Hosting works out-of-the-box with Firebase services, including Cloud Functions, Authentication, Realtime Database, Cloud Firestore, and Cloud Messaging."
+      },
+
+      {
+        "_id": "acb9b6785b62698fc6130db7615965e1",
+        "others_info": {
+          "is_todays_pick": false,
+          "is_trending": true
+        },
+        "category_id": "03",
+        "rating": { "number": 4.5, "badge": "Excellent" },
+        "total_view": 879,
+        "title": "Algorithms",
+        "thumbnail_url": "https://i.ibb.co/1vcgPzg/unsplash-Eh-Tc-C9s-YXsw-12.png",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/1119/1119005.png",
+        "details": "An algorithm in math is a procedure, a description of a set of steps that can be used to solve a mathematical computation."
+      },
+
+      {
+        "_id": "7f5b80c1cdd4df0111918883eae07349",
+        "others_info": {
+          "is_todays_pick": false,
+          "is_trending": true
+        },
+        "category_id": "03",
+        "rating": { "number": 4.5, "badge": "Excellent" },
+        "total_view": 1870,
+        "title": "applied mathematics",
+        "thumbnail_url": "https://i.ibb.co/1vcgPzg/unsplash-Eh-Tc-C9s-YXsw-12.png",
+        "image_url": "https://w7.pngwing.com/pngs/106/796/png-transparent-indian-mathematics-applied-mathematics-mathematician-jee-advanced-%C2%B7-2018-main-paper-2-mathematics-text-logo-number.png",
+        "published_date": "2022-08-24 18:00:00",
+        "details": "Applied mathematics involves the application of mathematics to problems which arise in various areas"
+      },
+
+
+    {
+      "_id": "e342b6c0c8efc8ca9e811991dc8a7901",
+      "others_info": {
+        "is_todays_pick": false,
+        "is_trending": false
+      },
+      "category_id": "04",
+      "rating": { "number": 4.5, "badge": "Excellent" },
+      "total_view": 733,
+      "title": "Ensemble Learning",
+     
+      "thumbnail_url": "https://i.ibb.co/df3gJ1b/unsplash-Eh-Tc-C9s-YXsw-13.png",
+      "image_url": "https://www.packt.com/wp-content/uploads/2022/05/ensemble-learning-image.png",
+      "details": "Ensemble learning helps improve machine learning results by combining several models."
+    },
+
+    {
+      "_id": "f06f8cc035b04bd1158e4198281915a4",
+      "others_info": {
+        "is_todays_pick": false,
+        "is_trending": true
+      },
+      "category_id": "05",
+      "rating": { "number": 4.5, "badge": "Excellent" },
+      "total_view": 127,
+      "title": "C++",
+      "thumbnail_url": "https://i.ibb.co/dr4TRY4/unsplash-Eh-Tc-C9s-YXsw-21.png",
+      "image_url": "https://www.pngkit.com/png/detail/534-5342172_c-language-course-c-logo.png",
+      "details": "C++ can be found just about everywhere you look."
+    },
+
+
+    {
+      "_id": "61f9ce168f7b15aadecb1d1fc80c72f0",
+      "others_info": {
+        "is_todays_pick": false,
+        "is_trending": true
+      },
+      "category_id": "05",
+      "rating": { "number": 4.5, "badge": "Excellent" },
+
+      "total_view": 100,
+      "title": "python",
+      "thumbnail_url": "https://i.ibb.co/L507x2V/unsplash-Eh-Tc-C9s-YXsw-14.png",
+      "image_url": "https://png.pngtree.com/png-vector/20220608/ourmid/pngtree-vector-illustration-of-an-icon-of-the-python-programming-language-png-image_4929818.png",
+      "details": "Python is commonly used for developing websites and software, task automation, data analysis, and data visualization"
+    },
+    {
+      "_id": "61f9ce168f7b15aadecb1d1fc80c72f7",
+      "others_info": {
+        "is_todays_pick": false,
+        "is_trending": false
+      },
+      "category_id": "06",
+      "rating": { "number": 4.5, "badge": "Excellent" },
+      "total_view": 100,
+      "title": "“ UI design ",
+      "thumbnail_url": "https://i.ibb.co/1rcTYYB/unsplash-Eh-Tc-C9s-YXsw-16.png",
+      "image_url": "https://i.pinimg.com/originals/46/be/01/46be01ab8d6d5fc64fb3400a2ceb3a74.png",
+      "details": "User interface (UI) design is the process designers use to build interfaces in software or computerized devices, focusing on looks or style.."
+    }
+  ]
