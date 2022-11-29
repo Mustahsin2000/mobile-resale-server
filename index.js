@@ -53,6 +53,24 @@ async function run() {
     const productsCollection = client.db('resaleMobile').collection('products');
     const bookingsCollection = client.db('resaleMobile').collection('bookings');
     const userCollection = client.db('resaleMobile').collection('users');
+    const productCollection = client.db('resaleMobile').collection('addproducts');
+    
+    // const verifyAdmin = async (req, res, next) => {
+    //   const decodedEmail = req.decoded.email;
+    //   const query = { email: decodedEmail };
+    //   const user = await usersCollection.findOne(query);
+    //   if (user?.role !== 'admin') {
+    //     return res.status(403).send({ message: 'forbidden access' });
+    //   }
+    //   next();
+
+    // }
+
+    // const verifySeller = async (req, res, next) => {
+    //  console.log(req.decoded.email);
+    //  next();
+
+    // }
 
     app.get('/categories', async (req, res) => {
       const query = {};
@@ -117,7 +135,7 @@ async function run() {
         return res.send({ accessToken: token })
       }
       console.log(user);
-      res.status(403).send({ accessToken: '' })
+      res.status(403).send({ accessToken: ' ' })
     })
 
 
@@ -159,6 +177,48 @@ async function run() {
       const result = await userCollection.updateOne(filter, updatedDoc, options);
       res.send(result);
     })
+
+    // //seller
+    // app.put('/users/seller/:id',verifyJWT, async (req, res) => {
+    //   const decodeEmail = req.decoded.email;
+    //   const query = {email:decodeEmail};
+    //   const user = await userCollection.findOne(query);
+
+    //   if(user?.role !== 'seller'){
+    //     return res.status(403).send({message:'forbidden access'})
+    //   }
+    //   const id = req.params.id;
+    //   const filter = { _id: ObjectId(id) };
+    //   const options = { upsert: true };
+    //   const updatedDoc = {
+    //     $set: {
+    //       role: 'seller'
+    //     }
+    //   }
+    //   const result = await userCollection.updateOne(filter, updatedDoc, options);
+    //   res.send(result);
+    // })
+
+    app.get('/addproducts', async(req,res)=>{
+      const query = {};
+      const products = await productCollection.find(query).toArray();
+      res.send(products);
+    })
+
+    app.post('/addproducts',async(req,res)=>{
+      const product = req.body;
+      const result = await productCollection.insertOne(product);
+      res.send(result);
+    })
+
+    app.delete('/addproducts/:id',async(req,res)=>{
+      const id = req.params.id;
+      const filter = {_id:ObjectId(id)};
+      const result = await productCollection.deleteOne(filter);
+      res.send(result);
+    })
+
+    
 
 
     //   app.get('/categories/:id',async(req,res)=>{
