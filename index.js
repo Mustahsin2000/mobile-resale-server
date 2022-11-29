@@ -13,6 +13,7 @@ require('dotenv').config()
 
 //resaleMobile
 //guSuoD1wROAhp1vN
+const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 const port = process.env.PORT || 5000;
 
@@ -55,17 +56,17 @@ async function run() {
     const bookingsCollection = client.db('resaleMobile').collection('bookings');
     const userCollection = client.db('resaleMobile').collection('users');
     const productCollection = client.db('resaleMobile').collection('addproducts');
-    
-    // const verifyAdmin = async (req, res, next) => {
-    //   const decodedEmail = req.decoded.email;
-    //   const query = { email: decodedEmail };
-    //   const user = await usersCollection.findOne(query);
-    //   if (user?.role !== 'admin') {
-    //     return res.status(403).send({ message: 'forbidden access' });
-    //   }
-    //   next();
+    const paymentsCollection = client.db('resaleMobile').collection('payments');
+    const verifyAdmin = async (req, res, next) => {
+      const decodedEmail = req.decoded.email;
+      const query = { email: decodedEmail };
+      const user = await usersCollection.findOne(query);
+      if (user?.role !== 'admin') {
+        return res.status(403).send({ message: 'forbidden access' });
+      }
+      next();
 
-    // }
+    }
 
     // const verifySeller = async (req, res, next) => {
     //  console.log(req.decoded.email);
@@ -125,6 +126,39 @@ async function run() {
       const result = await bookingsCollection.insertOne(booking);
       res.send(result);
     })
+
+    app.post('/create-payment-intent',async(req,res)=>{
+      const productspay = req.body;
+      const price  = productspay.price;
+      const amount = price * 100;
+
+      const paymentIntent = await stripe.paymentIntents.create({
+        currency:'usd',
+        amount:amount,
+        "payment_method_types":[
+          "card"
+        ]
+      });
+      res.send({
+        clientSecret: paymentIntent.client_secret,
+      });
+    });
+
+
+    app.post('/payments',async (req,res)=>{
+      const payment = req.body;
+      const result = await paymentsCollection.insertOne(payment);
+      const id = payment.bookingId;
+      const filter = {_id:ObjectId(id)}
+      const updatedDoc = {
+        $set:{
+          paid:true,
+          trasectionId:payment.trasectionId,
+        }
+      }
+      const updatedResult = await productCollection.updateOne(filter,updatedDoc);
+      res.send(result);
+    })
   
 
     app.get('/jwt', async (req, res) => {
@@ -159,14 +193,14 @@ async function run() {
       res.send(result);
     })
 
-    app.put('/users/admin/:id',verifyJWT, async (req, res) => {
-      const decodeEmail = req.decoded.email;
-      const query = {email:decodeEmail};
-      const user = await userCollection.findOne(query);
+    app.put('/users/admin/:id', async (req, res) => {
+      // const decodeEmail = req.decoded.email;
+      // const query = {email:decodeEmail};
+      // const user = await userCollection.findOne(query);
 
-      if(user?.role !== 'admin'){
-        return res.status(403).send({message:'forbidden access'})
-      }
+      // if(user?.role !== 'admin'){
+      //   return res.status(403).send({message:'forbidden access'})
+      // }
       const id = req.params.id;
       const filter = { _id: ObjectId(id) };
       const options = { upsert: true };
