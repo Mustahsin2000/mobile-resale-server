@@ -82,30 +82,38 @@ async function run() {
       res.send(product);
     });
 
-    app.get('/bookings', verifyJWT, async (req, res) => {
+    app.get('/bookings',async (req, res) => {
       const email = req.query.email;
-      const decodedEmail = req.decoded.email;
-      if (email !== decodedEmail) {
-        return res.status(403).send({ message: 'forbidden access' });
-      }
-      //   console.log(req.headers.authorization);
+      // const decodedEmail = req.decoded.email;
+      // if (email !== decodedEmail) {
+      //   return res.status(403).send({ message: 'forbidden access' });
+      // }
+      // //   console.log(req.headers.authorization);
       const query = { email: email };
       const bookings = await bookingsCollection.find(query).toArray();
       res.send(bookings);
     })
+
+    // app.get('/bookings/:id',async (req,res)=>{
+    //   const id = req.params.id;
+    //   const query = {_id:ObjectId(id)};
+    //   const booking = await bookingsCollection.findOne(query);
+    //   res.send(booking);
+    // })
 
     app.post('/bookings', async (req, res) => {
       const booking = req.body;
       const result = await bookingsCollection.insertOne(booking);
       res.send(result);
     })
+  
 
     app.get('/jwt', async (req, res) => {
       const email = req.query.email;
       const query = { email: email }
       const user = await userCollection.findOne(query);
       if (user) {
-        const token = jwt.sign({ email }, process.env.ACCESS_TOKEN, { expiresIn: '1h' })
+        const token = jwt.sign({ email }, process.env.ACCESS_TOKEN,{ expiresIn: '5h' })
         return res.send({ accessToken: token })
       }
       console.log(user);
@@ -119,6 +127,13 @@ async function run() {
       res.send(users);
     })
 
+    app.get('/users/admin/:email',async(req,res)=>{
+      const email = req.params.email;
+      const query = {email};
+      const user = await userCollection.findOne(query);
+      res.send({isAdmin: user?.role === 'admin'});
+    })
+
     app.post('/users', async (req, res) => {
       const user = req.body;
       const result = await userCollection.insertOne(user);
@@ -129,6 +144,7 @@ async function run() {
       const decodeEmail = req.decoded.email;
       const query = {email:decodeEmail};
       const user = await userCollection.findOne(query);
+
       if(user?.role !== 'admin'){
         return res.status(403).send({message:'forbidden access'})
       }
