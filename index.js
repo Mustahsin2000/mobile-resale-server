@@ -7,6 +7,7 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const cors = require('cors');
 
 const jwt = require('jsonwebtoken');
+const { query } = require('express');
 
 require('dotenv').config()
 
@@ -177,6 +178,15 @@ async function run() {
       const result = await userCollection.updateOne(filter, updatedDoc, options);
       res.send(result);
     })
+
+    app.get('/addproducts/:id',async(req,res)=>{
+      const id = req.params.id;
+      const query = {_id:ObjectId(id)};
+      const booking = await productCollection.findOne(query);
+      res.send(booking);
+    })
+
+
 
     // //seller
     // app.put('/users/seller/:id',verifyJWT, async (req, res) => {
