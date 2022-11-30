@@ -114,11 +114,11 @@ async function run() {
       res.send(bookings);
     })
 
-    // app.get('/bookings/:id',async (req,res)=>{
+    // app.delete('/bookings/:id',async (req,res)=>{
     //   const id = req.params.id;
-    //   const query = {_id:ObjectId(id)};
-    //   const booking = await bookingsCollection.findOne(query);
-    //   res.send(booking);
+    //   const filter = {_id:ObjectId(id)};
+    //   const result = await bookingsCollection.deleteOne(filter);
+    //   res.send(result);
     // })
 
     app.post('/bookings', async (req, res) => {
